@@ -1,45 +1,37 @@
-'use strict';
 
-process.stdin.resume();
-process.stdin.setEncoding('utf-8');
 
-let inputString = '';
-let currentLine = 0;
-
-process.stdin.on('data', inputStdin => {
-    inputString += inputStdin;
-});
-
-process.stdin.on('end', _ => {
-    inputString = inputString.trim().split('\n').map(string => {
-        return string.trim();
-    });
+/*
+ * Complete the vowelsAndConsonants function.
+ * Print your output using 'console.log()'.
+ */
+function vowelsAndConsonants(s) {
+    let consonants = []
+    for (let i = 0; i < s.length; i++){
+        if (s[i] === 'a' | s[i] === 'i' | s[i] === 'o' | s[i] === 'u' | s[i] === 'e'){
+            console.log(s[i]);
+        }
+        else {
+            consonants.push(s[i]);
+        }
+    }
     
-    main();    
-});
-
-function readLine() {
-    return inputString[currentLine++];
+    for (let i = 0; i < consonants.length; i++){
+        console.log(consonants[i]);
+    }
 }
 
 
-// To do *************************
+// Task 02
+// Regex function which returns regex of string starting and ending with same vowel with anything in between
 
-/**
-*   Calculate the area of a rectangle.
-**/
-function getArea(length, width) {
-    let area = length * width;
-    
-    return area;
-}
+function regexVar() {
 
-/**
-*   Calculate the perimeter of a rectangle.
-**/
-function getPerimeter(length, width) {
-    let perimeter = (length + width) * 2;
     
-    return perimeter;
+    let re = /^[aeiou]$|^([aeiou]).*\1$/
+    
+    /*
+     * Do not remove the return statement
+     */
+    return re;
 }
 

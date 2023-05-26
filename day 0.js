@@ -22,17 +22,24 @@ function readLine() {
     return inputString[currentLine++];
 }
 
-function regexVar() {
-    /*
-     * Declare a RegExp object variable named 're'
-     * It must match a string that starts and ends with the same vowel (i.e., {a, e, i, o, u})
-     */
+
+// To do *************************
+
+/**
+*   Calculate the area of a rectangle.
+**/
+function getArea(length, width) {
+    let area = length * width;
     
-    let re = /^[aeiou]$|^([aeiou]).*\1$/
+    return area;
+}
+
+/**
+*   Calculate the perimeter of a rectangle.
+**/
+function getPerimeter(length, width) {
+    let perimeter = (length + width) * 2;
     
-    /*
-     * Do not remove the return statement
-     */
-    return re;
+    return perimeter;
 }
 
