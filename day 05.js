@@ -30,3 +30,22 @@ class Square extends Rectangle {
         this.h = w;
     }
 }
+
+
+// task 03
+// bitwise operator 
+
+function getMaxLessThanK(n, k){
+    let max = 0
+    let bitResult = 0
+    for (let i = 1; i <= n; i++){
+        for (let j = i+1; j<=n; j++){
+            bitResult = i&j;
+            if (max < bitResult && bitResult < k){
+                max = bitResult;
+            }
+        }
+    }
+    
+    return max;
+}
