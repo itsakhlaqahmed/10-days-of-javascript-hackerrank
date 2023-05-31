@@ -13,3 +13,20 @@ function modifyArray(nums) {
     
     return nums;
 }
+
+
+// task 02
+// OOP => Class & Inheritance
+
+Rectangle.prototype.area = function (){
+    return this.w * this.h;
+}
+
+
+class Square extends Rectangle {
+    constructor (w,h){
+        super(w,h);
+        this.w = w;
+        this.h = w;
+    }
+}
