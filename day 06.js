@@ -32,3 +32,17 @@ function regexVar() {
      */
     return re;
 }
+
+
+// task 03
+// date class and methods
+
+function getDayName(dateString) {
+    let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday',  'Saturday']
+    
+    let date = new Date(dateString);
+    let dayName = days[date.getDay()];
+    
+    return dayName;
+}
+
